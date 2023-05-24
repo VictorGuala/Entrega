@@ -1,0 +1,79 @@
+[
+	{
+		"id": 1,
+		"title": "Armonizacion",
+		"description": "Armonizacion con Reiki",
+		"price": 800,
+		"thumbnail": "./img/productos/armonizacion.jpg",
+		"code": "armo",
+		"stock": 88,
+		"status": true,
+		"category": "Reiki"
+	},
+	{
+		"id": 2,
+		"title": "Barras",
+		"description": "Sesiones de Barras Access®",
+		"price": 1500,
+		"thumbnail": "./img/productos/barras.jpg",
+		"code": "barras",
+		"stock": 13,
+		"status": true,
+		"category": "Terapia"
+	},
+	{
+		"id": 3,
+		"title": "Masaje Bioenergetico",
+		"description": "Masaje bioenergético: ARMONÍA PARA CUERPO Y MENTE",
+		"price": 800,
+		"thumbnail": "./img/productos/bioenergetico.jpg",
+		"code": "bioener",
+		"stock": 6,
+		"status": true,
+		"category": "Masajes"
+	},
+	{
+		"id": 4,
+		"title": "Hipnosis",
+		"description": "Sanar duelos a través de hipnosis o sacarnos dudas y obtener mensajes a través de canalizaciones.Terapia Regresiva on line o presencial",
+		"price": 1000,
+		"thumbnail": "./img/productos/hipnosis.jpg",
+		"code": "hipnosis",
+		"stock": 15,
+		"status": true,
+		"category": "Terapia"
+	},
+	{
+		"id": 5,
+		"title": "Masaje",
+		"description": "Masaje, Reiki y piedras",
+		"price": 800,
+		"thumbnail": "./img/productos/masajes.jpg",
+		"code": "mas",
+		"stock": 9,
+		"status": true,
+		"category": "Masajes"
+	},
+	{
+		"id": 6,
+		"title": "Pendulo Hebreo",
+		"description": "* Limpiar y equilibrar nuestra Áura.* Abrir, limpiar y equilibrar los chakras.        * Eliminar estrés.* Corta pactos inconscientes (cordones energéticos, consentimientos) que podamos tener con otras personas.* Limpiar nuestras impurezas recogidas a nivel físico, emocional, mental, y espiritual.",
+		"price": 800,
+		"thumbnail": "./img/productos/pendulo.jpg",
+		"code": "pendulo",
+		"stock": 11,
+		"status": true,
+		"category": "Terapia"
+	},
+	{
+		"id": 7,
+		"title": "Regresiones",
+		"description": "La terapia regresiva a través de hipnosis, es una terapia consciente que nos lleva a recuerdo de tu vida en el que hayas vivido situaciones que te marcaron. De esa manera trabajamos en desprogramar  miedos, dolores, cargas de tus padres, sanamos a tu niña interior, duelos no resueltos, duelos de personas fallecidas, vicios, relaciones tóxicas etc.  *Es una terapia que se recomienda hacer cada 15 días o una vez al mes",
+		"price": 1000,
+		"thumbnail": "./img/productos/regresivo.jpg",
+		"code": "regres",
+		"stock": 12,
+		"status": true,
+		"category": "Terapia"
+	}
+]
