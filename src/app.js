@@ -18,15 +18,15 @@ const io = new Server(httpServer);
 
 app, engine("handlebars", handlebars.engine());
 app.set("views", Utils.__dirname + "/views");
-app.set * "view emgine", "handlebars";
+app.set * "view engine", "handlebars";
 
 app.use(express.static(Utils.__dirname + "/public"));
 
 app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
-app.use("/api/carts", cartsRouter);
+app.use("api/carts/", cartsRouter);
 
-io.on("conection", async (socket) => {
+io.on("connection", async (socket) => {
     console.log("Cliente Nuevo");
     const data = await manager.getProducts();
     if (data) {
