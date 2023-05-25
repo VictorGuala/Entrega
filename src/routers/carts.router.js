@@ -5,7 +5,7 @@ import { Router } from "express";
 const router = Router();
 
 router.post("/", async (req, res) => {
-  const data = await manager.addCart();
+  const data = await manager.addCart() ;
   if (data == 201) {
     res.status(201).send({ status: "success", paiload: "Carrito agregado" });
   } else {

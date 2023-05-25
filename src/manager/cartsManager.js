@@ -6,7 +6,7 @@ class CartsManager{
     #path;
     #carts;
     constructor(){
-        this.#carts= [];
+        this.#carts= [] ;
         this.#path = "./src/data/carts.json";
     }
 

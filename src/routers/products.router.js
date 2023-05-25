@@ -5,7 +5,7 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   const limit = req.query.limit;
-  const data = await manager.getProducts();
+  const data = await manager.getProducts() ;
   if (data) {
     !limit
       ? res.send({ status: "success", paiload: data })

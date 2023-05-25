@@ -6,7 +6,7 @@ class ProductManager{
     #path;
     #products;
     constructor (){
-        this.#products = [];
+        this.#products = [] ;
         this.#path = "./src/data/products.json";
     }
 

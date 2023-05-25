@@ -1,32 +1,32 @@
-import express, { json } from "express";
-import * as Utils from "./utils.js";
-import handlebars, { engine } from "express-handlebars";
+import express from "express";
+import __dirname from "./utils.js";
+import handlebars from "express-handlebars";
 import productsRouter from "./routers/products.router.js";
 import cartsRouter from "./routers/carts.router.js";
 import viewsRouter from "./routers/views.router.js";
-import { Server } from "socket.io";
-import { manager } from "./manager/productManager.js";
+import {Server} from "socket.io";
+import {manager} from "./manager/productManager.js";
 
 const app = express();
 app.use(express.json());
 
 const httpServer = app.listen(8080, () =>
-    console.log("Servidor escuchando puerto 8080")
+  console.log("Servidor escuchando en el puerto 8080")
 );
 
 const io = new Server(httpServer);
 
-app, engine("handlebars", handlebars.engine());
-app.set("views", Utils.__dirname + "/views");
-app.set * "view engine", "handlebars";
+app.engine("handlebars", handlebars.engine());
+app.set("views", __dirname + "/views");
+app.set("view engine", "handlebars");
 
-app.use(express.static(Utils.__dirname + "/public"));
+app.use(express.static(__dirname + "/public"));
 
 app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
-app.use("api/carts/", cartsRouter);
+app.use("/api/carts", cartsRouter);
 
-io.on("connection", async (socket) => {
+io.on("conection", async (socket) => {
     console.log("Cliente Nuevo");
     const data = await manager.getProducts();
     if (data) {
@@ -50,7 +50,7 @@ io.on("connection", async (socket) => {
         if (result == 406) {
             socket.emit("resp-delete-product", "El servicio no existe");
         } else {
-            const product = await manager.getProducts();
+            const products = await manager.getProducts();
             if (products) {
                 io.emit("resp-delete-product", products);
             }
