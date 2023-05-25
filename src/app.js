@@ -8,7 +8,7 @@ import { Server } from "socket.io";
 import { manager } from "./manager/productManager.js";
 
 const app = express();
-app.use(express, json());
+app.use(express.json());
 
 const httpServer = app.listen(8080, () =>
     console.log("Servidor escuchando puerto 8080")
@@ -18,15 +18,15 @@ const io = new Server(httpServer);
 
 app, engine("handlebars", handlebars.engine());
 app.set("views", Utils.__dirname + "/views");
-app.set * "view engine", "handlebars";
+app.set * "view emgine", "handlebars";
 
 app.use(express.static(Utils.__dirname + "/public"));
 
 app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
-app.use("api/carts/", cartsRouter);
+app.use("/api/carts", cartsRouter);
 
-io.on("connection", async (socket) => {
+io.on("conection", async (socket) => {
     console.log("Cliente Nuevo");
     const data = await manager.getProducts();
     if (data) {
